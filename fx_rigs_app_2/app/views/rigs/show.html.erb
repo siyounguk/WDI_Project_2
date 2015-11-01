@@ -6,8 +6,13 @@
 </p>
 
 <p>
+  <strong>Guitarist photo:</strong>
+  <%= image_tag @rig.guitarist_photo %>
+</p>
+
+<p>
   <strong>Rig photo:</strong>
-  <%= @rig.rig_photo %>
+  <%= image_tag @rig.rig_photo, width: 400 %>
 </p>
 
 <p>
@@ -32,7 +37,7 @@
 
 <p>
   <strong>Genre:</strong>
-  <%= @rig.genre_id %>
+  <%= @rig.genre.genre_name %>
 </p>
 
 <%= link_to 'Edit', edit_rig_path(@rig) %> |
