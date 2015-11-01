@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  guitarist: MyString
+  rig_photo: MyText
+  description: MyText
+  comments: MyText
+  user_id: 1
+  pedal_id: 1
+  genre_id: 1
+
+two:
+  guitarist: MyString
+  rig_photo: MyText
+  description: MyText
+  comments: MyText
+  user_id: 1
+  pedal_id: 1
+  genre_id: 1

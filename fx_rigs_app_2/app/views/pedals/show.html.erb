@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pedal.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @pedal.type %>
+</p>
+
+<p>
+  <strong>Pedal photo:</strong>
+  <%= @pedal.pedal_photo %>
+</p>
+
+<p>
+  <strong>Price paid:</strong>
+  <%= @pedal.price_paid %>
+</p>
+
+<p>
+  <strong>Review:</strong>
+  <%= @pedal.review %>
+</p>
+
+<p>
+  <strong>Rig:</strong>
+  <%= @pedal.rig_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @pedal.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_pedal_path(@pedal) %> |
+<%= link_to 'Back', pedals_path %>

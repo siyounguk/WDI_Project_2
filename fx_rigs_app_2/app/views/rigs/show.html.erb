@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Guitarist:</strong>
+  <%= @rig.guitarist %>
+</p>
+
+<p>
+  <strong>Rig photo:</strong>
+  <%= @rig.rig_photo %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @rig.description %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @rig.comments %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @rig.user_id %>
+</p>
+
+<p>
+  <strong>Pedal:</strong>
+  <%= @rig.pedal_id %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @rig.genre_id %>
+</p>
+
+<%= link_to 'Edit', edit_rig_path(@rig) %> |
+<%= link_to 'Back', rigs_path %>
