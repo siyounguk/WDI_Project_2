@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   resources :favourites
   resources :genres
   resources :pedals
-  resources :rigs
+  resources :rigs do
+    member do
+      put "like", to: "rigs#upvote"
+      put "dislike", to: "rigs#downvote"
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

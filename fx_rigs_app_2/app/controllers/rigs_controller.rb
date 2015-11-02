@@ -1,6 +1,13 @@
 class RigsController < ApplicationController
   before_action :set_rig, only: [:show, :edit, :update, :destroy]
 
+
+  def upvote
+    @rig = Rig.find(params[:id])
+    @rig.upvote_by current_user
+    redirect_to rigs_path
+    @user = current_user
+  end
   # GET /rigs
   # GET /rigs.json
   def index
