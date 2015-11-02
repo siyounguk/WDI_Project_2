@@ -33,20 +33,21 @@
   </div>
 
   <div class="field">
-    <%= f.label :pedal_id %>  
-    <%=  f.collection_select(:pedal_id,Pedal.all, :id, :title ) %>
+    <%= f.label :pedal_ids %>  
+    <%=  f.collection_select( :pedal_ids, Pedal.all, :id, :title, {}, { multiple: true } ) %>
    </div> 
 
   <div class="field">
    
  
-    <%= form_tag("/search", method: "get") do %>
-      <%= label_tag(:p, "Search for:") %>
-      <%= text_field_tag(:p) %>
-      <%= submit_tag("Search") %>
-    <% end %>
+  <div class="field">
+
+
+
   </div>
  
+   
+  
 
   <div class="field">
     <%= f.label :genre_id %>  
