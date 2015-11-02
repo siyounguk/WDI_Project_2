@@ -6,12 +6,10 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Type</th>
+      <th>Category</th>
       <th>Pedal photo</th>
-      <th>Price paid</th>
-      <th>Review</th>
-      <th>Rig</th>
-      <th>User</th>
+      <th>Price</th>
+      <th>Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,12 +18,10 @@
     <% @pedals.each do |pedal| %>
       <tr>
         <td><%= pedal.title %></td>
-        <td><%= pedal.pedal_type %></td>
-        <td><%= pedal.image_url %></td>
-        <td><%= pedal.price %></td>
+        <td><%= pedal.category %></td>
+        <td><%= image_tag pedal.image_url %></td>
+        <td><%= pedal.price.to_f %></td>
         <td><%= pedal.short_description %></td>
-        <td><%= pedal.rig_id %></td>
-        <td><%= pedal.user_id %></td>
         <td><%= link_to 'Show', pedal %></td>
         <td><%= link_to 'Edit', edit_pedal_path(pedal) %></td>
         <td><%= link_to 'Destroy', pedal, method: :delete, data: { confirm: 'Are you sure?' } %></td>

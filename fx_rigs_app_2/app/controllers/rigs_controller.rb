@@ -73,6 +73,6 @@ class RigsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rig_params
-      params.require(:rig).permit(:guitarist, :guitarist_photo,:rig_photo, :description, :comments, :user_id, :pedal_id, :genre_id, :username)
+      params.require(:rig).permit(:guitarist, :guitarist_photo,:rig_photo, :description, :comments, :user_id, :pedal_id, :genre_id, :username, pedal_ids:[])
     end
 end

@@ -27,12 +27,18 @@
 
 <p>
   <strong>User:</strong>
-  <%= @rig.user.username %>
+  <%= @rig.user.username if @rig.user %>
 </p>
 
 <p>
   <strong>Pedal:</strong>
-  <%= @rig.pedal_id %>
+  <ul>
+    <% @rig.pedals.each do |ped| %>
+      <li>
+        <%= link_to ped.title, ped %>
+      </li>
+    <% end %>
+  </ul>
 </p>
 
 <p>
