@@ -7,8 +7,7 @@
     <tr>
       <th>Guitarist</th>
       <th>Rig photo</th>
-      <th>Description</th>
-      <th>Comments</th>
+      <th>Guitarist photo</th>
       <th>User</th>
       <th>Pedal</th>
       <th>Genre</th>
@@ -22,8 +21,6 @@
         <td><%= rig.guitarist %></td>
         <td><%= image_tag rig.guitarist_photo %></td>
         <td><%= image_tag rig.rig_photo, width: 400 %></td>
-        <td><%= rig.description %></td>
-        <td><%= rig.comments %></td>
         <td><%= rig.user.username if rig.user %></td>
         <td><%= rig.pedal_id %></td>
         <td><%= rig.genre.genre_name if rig.genre %></td>

@@ -19,11 +19,11 @@
   <tbody>
     <% @pedals.each do |pedal| %>
       <tr>
-        <td><%= pedal.name %></td>
-        <td><%= pedal.type %></td>
-        <td><%= pedal.pedal_photo %></td>
-        <td><%= pedal.price_paid %></td>
-        <td><%= pedal.review %></td>
+        <td><%= pedal.title %></td>
+        <td><%= pedal.pedal_type %></td>
+        <td><%= pedal.image_url %></td>
+        <td><%= pedal.price %></td>
+        <td><%= pedal.short_description %></td>
         <td><%= pedal.rig_id %></td>
         <td><%= pedal.user_id %></td>
         <td><%= link_to 'Show', pedal %></td>
