@@ -18,8 +18,14 @@ def parse_product_page(page_uri, category)
   puts image_url
   puts short_description
 
-  Pedal
-  #find_or_create active record
+  pedal = Pedal.find_or_create_by(title: title)
+
+  pedal.update_attributes({
+    category:           category,
+    price:              price,
+    image_url:          image_url,
+    short_description:  short_description 
+  })
 
 
   # Pedal.create({
@@ -42,16 +48,12 @@ def main
 
   pedal_types = page.css(".brands-list")[0].css("li")
 
-
-
   pedal_types.each do |pedal_type|
     title = pedal_type.attr("title")
     uri = pedal_type.css("a").attr("href").value
     parse_category_page uri, title
   end
 end
-
-
 
 
 namespace :scrape do
