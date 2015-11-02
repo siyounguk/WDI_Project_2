@@ -5,3 +5,7 @@ th{
 td{
   border: 1px solid black;
 }
+
+.select2-choices{
+  width: 300px;
+}

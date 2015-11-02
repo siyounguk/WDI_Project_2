@@ -35,6 +35,7 @@
   <ul>
     <% @rig.pedals.each do |ped| %>
       <li>
+        <%= image_tag ped.image_url %>
         <%= link_to ped.title, ped %>
       </li>
     <% end %>
