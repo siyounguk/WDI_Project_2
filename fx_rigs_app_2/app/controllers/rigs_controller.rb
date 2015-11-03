@@ -19,9 +19,11 @@ class RigsController < ApplicationController
   # GET /rigs
   # GET /rigs.json
   def index
-    @rigs = Rig.all
-    @rigs = Rig.search_by_guitarist(params[:q])
-    Rig.search_by_guitarist(params[:q])
+    if params[:q]
+      @rigs = Rig.search_by_guitarist(params[:q])
+    else
+      @rigs = Rig.all
+    end
   end
 
   # GET /rigs/1

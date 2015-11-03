@@ -1,7 +1,11 @@
 <section>
   <% @rigs.each do |rig| %>
-    <%= link_to rig.guitarist, rig %>
-
+    <p>
+        <%= link_to rig.guitarist, rig %>
+    </p>
+    <p class="guitarist-image">
+        <%= image_tag rig.guitarist_photo %>
+    </p>
     <%= link_to 'Edit', edit_rig_path(rig) %>
 
     <% if current_user.try(:admin?) %>

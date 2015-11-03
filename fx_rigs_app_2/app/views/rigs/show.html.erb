@@ -17,7 +17,7 @@
   </p>
 <% end %>
 
-<% if @rig.rig_upload_image %>
+<% if @rig.rig_upload_image.url %>
   <p class="rig-image">
     <b>Rig Upload Image:</b>
     <%= image_tag @rig.rig_upload_image.url %>
@@ -82,7 +82,7 @@
 
 <p>
   <strong>Genre:</strong>
-  <%= @rig.genre.genre_name %>
+  <%= link_to @rig.genre.genre_name, genre_path %>
 </p>
 
 <%= link_to 'Edit', edit_rig_path(@rig) %> |
