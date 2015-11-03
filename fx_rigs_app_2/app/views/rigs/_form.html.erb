@@ -20,6 +20,10 @@
     <%= f.text_area :guitarist_photo %>
   </div>
   <div class="field">
+    <%= f.label :guitarist_upload_image %><br />
+    <%= f.file_field :guitarist_upload_image %>
+  </div>
+  <div class="field">
     <%= f.label :rig_photo %><br>
     <%= f.text_area :rig_photo %>
   </div>
@@ -36,8 +40,6 @@
     <%= f.label :pedal_ids %>  
     <%=  f.collection_select( :pedal_ids, Pedal.all, :id, :title, {}, { multiple: true } ) %>
    </div> 
- 
-  
 
   <div class="field">
     <%= f.label :genre_id %>  

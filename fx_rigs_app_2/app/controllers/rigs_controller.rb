@@ -2,15 +2,11 @@ class RigsController < ApplicationController
   before_action :set_rig, only: [:show, :edit, :update, :destroy]
 
   def add_new_comment
-
-
-
     @rig = Rig.find(params[:id])
     @comment = Comment.new(comment_params);
     @comment.user = current_user;
     @comment.save
     @rig.comments << @comment
-
     redirect_to rig_path(@rig)
   end
 
@@ -97,6 +93,6 @@ class RigsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:title, :comment)
+      params.require(:comment).permit(:title, :comment, :guitarist_upload_image)
     end
 end
