@@ -20,7 +20,9 @@
       <%= link_to "Signup |",new_user_registration_path %> 
     <% end %>
     <%= link_to "Rigs",rigs_path %> |
-    <%= link_to "New Rig |", new_rig_path if user_signed_in? %>
+    <%= link_to "New Rig", new_rig_path if user_signed_in? %>
+    
+
     <%= link_to "Pedals",pedals_path %>
     <%= form_tag( results_path, method: "get") do %>
       <%= label_tag(:q, "Search Rigs:") %>

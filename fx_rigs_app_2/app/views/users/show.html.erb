@@ -10,5 +10,13 @@
   <%= @user.pedal_id %>
 </p>
 
+<p>
+  <strong>Favourites:</strong>
+ 
+    <%= @user.find_liked_items %>
+    
+  
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
