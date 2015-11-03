@@ -21,9 +21,10 @@
     <% @rigs.each do |rig| %>
       <tr>
         <td><%= rig.guitarist %></td>
-        <td><%= image_tag rig.guitarist_photo %></td>
-        <td><%= image_tag rig.guitarist_upload_image.url %></td>
-        <td><%= image_tag rig.rig_photo, width: 400 %></td>
+        <td class="guitarist-image"><%= image_tag rig.guitarist_photo %></td>
+        <td class="guitarist-image"><%= image_tag rig.guitarist_upload_image.url %></td>
+        <td class="rig-image"><%= image_tag rig.rig_photo, width: 400 %></td>
+        <td class="rig-image"><%= image_tag rig.rig_upload_image.url %></td>
         <td><%= rig.user.username if rig.user %></td>
         <td><%= rig.genre.genre_name if rig.genre %></td>
         <td><%= link_to "upvote", like_rig_path(rig), method: :put%></td>

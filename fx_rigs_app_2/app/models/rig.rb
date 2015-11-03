@@ -1,5 +1,6 @@
 class Rig < ActiveRecord::Base
   mount_uploader :guitarist_upload_image, GuitaristImageUploader
+  mount_uploader :rig_upload_image, RigImageUploader
   acts_as_votable
   acts_as_commentable
   belongs_to :user
