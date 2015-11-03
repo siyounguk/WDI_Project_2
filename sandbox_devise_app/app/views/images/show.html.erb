@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= image_tag @image.image_url %>
+</p>
+
+<p>
+  <strong>Caption:</strong>
+  <%= @image.caption %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @image.user.username %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <% @image.comments.each do |comment| %>
+    <p><%= comment.comment %></p>
+  <% end %>
+</p>
+
+<p>
+  <%= form_tag "/images/#{@image.id}/add_new_comment" do %>
+    <%= hidden_field_tag "id", :id %>
+    <%= text_area_tag "comment[comment]" %>
+    <%= submit_tag "Post Comment" %>
+  <% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>
