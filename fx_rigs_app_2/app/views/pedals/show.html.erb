@@ -31,6 +31,15 @@
 </p>
 
 <p>
+  <%= link_to "upvote", like_pedal_path(@pedal[:id]), method: :put%></td>
+</p> 
+
+<p>
+  <%= @pedal.get_likes.size %>
+</p>
+
+
+<p>
   <strong>User:</strong>
   <%= @pedal.user_id %>
 </p>

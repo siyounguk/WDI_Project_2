@@ -7,10 +7,15 @@ Rails.application.routes.draw do
   resources :users
   resources :favourites
   resources :genres
-  resources :pedals
+  resources :pedals do
+    member do
+      put "like", to: "pedals#upvote"
+      put "dislike", to: "pedals#downvote"
+    end
+  end
   resources :rigs do
     member do
-      put "like", to: "rigs#upvote"
+      put "like", to: "rigs#show"
       put "dislike", to: "rigs#downvote"
     end
   end

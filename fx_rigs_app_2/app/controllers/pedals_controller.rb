@@ -1,6 +1,13 @@
 class PedalsController < ApplicationController
   before_action :set_pedal, only: [:show, :edit, :update, :destroy]
 
+  def upvote
+    @pedal = Pedal.find(params[:id])
+    @pedal.upvote_by current_user
+    redirect_to pedal_path
+  end
+
+
   # GET /pedals
   # GET /pedals.json
   def index

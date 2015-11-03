@@ -1,5 +1,6 @@
 
 class Pedal < ActiveRecord::Base
+  acts_as_votable
   
   include PgSearch
 
