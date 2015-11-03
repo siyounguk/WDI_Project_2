@@ -5,14 +5,14 @@
   <%= @rig.guitarist %>
 </p>
 
-<p>
+<p  class="guitarist-image">
   <strong>Guitarist photo:</strong>
   <%= image_tag @rig.guitarist_photo %>
 </p>
 
-<p>
-  <b>Guitarist Upload Image:</b>
-  <%= image_tag @rig.guitarist_upload_image %>
+<p class="guitarist-image">
+  <strong>Guitarist Upload Image:</strong>
+  <%= image_tag @rig.guitarist_upload_image.url %>
 </p>
 
 <p>

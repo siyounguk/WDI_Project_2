@@ -8,6 +8,7 @@
       <th>Guitarist</th>
       <th>Rig photo</th>
       <th>Guitarist photo</th>
+      <th>Guitarist upload image</th>
       <th>User</th>
       <th>Genre</th>
       <th>click to like</th>
@@ -21,7 +22,7 @@
       <tr>
         <td><%= rig.guitarist %></td>
         <td><%= image_tag rig.guitarist_photo %></td>
-        <td><%= image_tag rig.guitarist_upload_image %></td>
+        <td><%= image_tag rig.guitarist_upload_image.url %></td>
         <td><%= image_tag rig.rig_photo, width: 400 %></td>
         <td><%= rig.user.username if rig.user %></td>
         <td><%= rig.genre.genre_name if rig.genre %></td>
