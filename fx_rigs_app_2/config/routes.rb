@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   get 'home/index'
 
+  post "/rigs/:id/add_new_comment", to: "rigs#add_new_comment"
+
 
   root 'home#index'
   resources :users

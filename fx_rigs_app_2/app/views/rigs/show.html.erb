@@ -20,9 +20,22 @@
   <%= @rig.description %>
 </p>
 
+
 <p>
   <strong>Comments:</strong>
-  <%= @rig.comments %>
+  <% if @rig.comments %>
+    <% @rig.comments.each do |comment| %>
+      <p><%= comment.comment %></p>
+    <% end %>
+  <% end %>
+</p>
+
+<p>
+  <%= form_tag "/rigs/#{@rig.id}/add_new_comment" do %>
+    <%= hidden_field_tag "id", :id %>
+    <%= text_area_tag "comment[comment]" %>
+    <%= submit_tag "Post Comment" %>
+  <% end %>
 </p>
 
 <p>
@@ -41,6 +54,8 @@
     <% end %>
   </ul>
 </p>
+
+
 
 
 <p>
