@@ -1,4 +1,6 @@
 class Rig < ActiveRecord::Base
+  include PgSearch
+  pg_search_scope :search_by_guitarist, :against => :guitarist
   mount_uploader :guitarist_upload_image, GuitaristImageUploader
   mount_uploader :rig_upload_image, RigImageUploader
   acts_as_votable

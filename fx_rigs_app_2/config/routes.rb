@@ -21,6 +21,8 @@ Rails.application.routes.draw do
       put "dislike", to: "rigs#downvote"
     end
   end
+
+  resources :results, only: [:index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

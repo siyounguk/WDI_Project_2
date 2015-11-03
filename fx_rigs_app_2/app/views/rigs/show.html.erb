@@ -5,25 +5,29 @@
   <%= @rig.guitarist %>
 </p>
 
-<p  class="guitarist-image">
-  <strong>Guitarist photo:</strong>
-  <%= image_tag @rig.guitarist_photo %>
-</p>
+<% if @rig.guitarist_upload_image %>
+  <p class="guitarist-image">
+    <strong>Guitarist Upload Image:</strong>
+    <%= image_tag @rig.guitarist_upload_image.url %>
+  </p>
+<% else %>
+  <p  class="guitarist-image">
+    <strong>Guitarist photo:</strong>
+    <%= image_tag @rig.guitarist_photo %>
+  </p>
+<% end %>
 
-<p class="guitarist-image">
-  <strong>Guitarist Upload Image:</strong>
-  <%= image_tag @rig.guitarist_upload_image.url %>
-</p>
-
-<p class="rig-image">
-  <strong>Rig photo:</strong>
-  <%= image_tag @rig.rig_photo, width: 400 %>
-</p>
-
-<p class="rig-image">
-  <b>Rig Upload Image:</b>
-  <%= image_tag @rig.rig_upload_image.url %>
-</p>
+<% if @rig.rig_upload_image %>
+  <p class="rig-image">
+    <b>Rig Upload Image:</b>
+    <%= image_tag @rig.rig_upload_image.url %>
+  </p>
+<% else %>
+  <p class="rig-image">
+    <strong>Rig photo:</strong>
+    <%= image_tag @rig.rig_photo %>
+  </p>
+<% end %>
 
 <p>
   <strong>Description:</strong>

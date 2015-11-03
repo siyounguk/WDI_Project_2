@@ -1,0 +1,12 @@
+<section>
+  <% @rigs.each do |rig| %>
+    <%= link_to rig.guitarist, rig %>
+
+    <%= link_to 'Edit', edit_rig_path(rig) %>
+
+    <% if current_user.try(:admin?) %>
+        <%= link_to 'Destroy', rig, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+    <br >
+  <% end %>
+</section>

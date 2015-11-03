@@ -20,6 +20,8 @@ class RigsController < ApplicationController
   # GET /rigs.json
   def index
     @rigs = Rig.all
+    @rigs = Rig.search_by_guitarist(params[:q])
+    Rig.search_by_guitarist(params[:q])
   end
 
   # GET /rigs/1
