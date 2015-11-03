@@ -5,27 +5,32 @@ DOMAIN = "http://www.gear4music.com"
 
 
 def parse_product_page(page_uri, category)
-  page = Nokogiri::HTML(open(DOMAIN + page_uri))
-  title = page.css("h1.product").text.encode('ISO-8859-1')
-  price = page.css(".main-price .c-val").text.encode('ISO-8859-1')
-  image_url = page.css(".main-image").attr("src").to_s.encode('ISO-8859-1')
-  short_description = page.css(".short-description").text.encode('ISO-8859-1')
+  begin 
+    page = Nokogiri::HTML(open(DOMAIN + page_uri))
+    title = page.css("h1.product").text.encode('ISO-8859-1')
+    price = page.css(".main-price .c-val").text.encode('ISO-8859-1')
+    image_url = page.css(".main-image").attr("src").to_s.encode('ISO-8859-1')
+    short_description = page.css(".short-description").text.encode('ISO-8859-1')
 
-  puts "-----" * 20
-  puts "title (#{title})"
-  puts "category (#{category})"
-  puts "£#{price}"
-  puts image_url
-  puts short_description
+    puts "-----" * 20
+    puts "title (#{title})"
+    puts "category (#{category})"
+    puts "£#{price}"
+    puts image_url
+    puts short_description
 
-  pedal = Pedal.find_or_create_by(title: title)
+  
+    pedal = Pedal.find_or_create_by(title: title)
 
-  pedal.category            = category
-  pedal.price               = price
-  pedal.image_url           = image_url
-  pedal.short_description   = short_description 
+    pedal.category            = category
+    pedal.price               = price
+    pedal.image_url           = image_url
+    pedal.short_description   = short_description 
 
-  pedal.save
+    pedal.save
+  rescue
+    puts "missed a record"
+  end
 
   # Pedal.create({
   #   title: title,
