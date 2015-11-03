@@ -25,9 +25,12 @@
   <%= @pedal.short_description %>
 </p>
 
+
 <p>
-  <strong>Rig:</strong>
-  <%= @pedal.rig_id %>
+  <strong>Rigs:</strong>
+  <% @pedal.rigs.each do |rig| %>
+    <%= link_to rig.guitarist, rig %>
+  <% end %>
 </p>
 
 <p>
