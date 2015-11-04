@@ -31,13 +31,15 @@
   <% end %>
 </p>
 
-<p>
-  <%= form_tag "/rigs/#{@rig.id}/add_new_comment" do %>
-    <%= hidden_field_tag "id", :id %>
-    <%= text_area_tag "comment[comment]" %>
-    <%= submit_tag "Post Comment" %>
-  <% end %>
-</p>
+<% if user_signed_in? %>
+  <p>
+    <%= form_tag "/rigs/#{@rig.id}/add_new_comment" do %>
+      <%= hidden_field_tag "id", :id %>
+      <%= text_area_tag "comment[comment]" %>
+      <%= submit_tag "Post Comment" %>
+    <% end %>
+  </p>
+<% end %>
 
 <p>
   <strong>User:</strong>

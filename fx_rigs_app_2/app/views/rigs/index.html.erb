@@ -6,9 +6,7 @@
   <thead>
     <tr>
       <th>Guitarist</th>
-      <th>Guitarist upload photo</th>
       <th>Guitarist photo</th>
-      <th>Rig upload photo</th>
       <th>Rig photo</th>  
       <th>User</th>
       <th>Genre</th>
@@ -29,8 +27,8 @@
         <td><%= link_to "upvote", like_rig_path(rig), method: :put%></td>
         <td><%= rig.get_likes.size %></td>
         <td><%= link_to 'Show', rig %></td>
-        <td><%= link_to 'Edit', edit_rig_path(rig) %></td>
-        <td><%= link_to 'Destroy', rig, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_rig_path(rig) if current_user %></td>
+        <td><%= link_to 'Destroy', rig, method: :delete, data: { confirm: 'Are you sure?' } if current_user %></td>
       </tr>
     <% end %>
   </tbody>

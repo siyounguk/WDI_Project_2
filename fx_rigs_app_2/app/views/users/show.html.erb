@@ -9,23 +9,23 @@
   <strong>Pedal:</strong>
   <%= @user.pedal_id %>
 </p>
+  
 
-<p>
-  <strong>Favourites:</strong>
-    
-
-    <%= @user.find_liked_items[4].title %> <br>
-    <%= @user.find_liked_items[5].guitarist %>  
-</p>
-
+<strong>Favourite Pedals:</strong>
 <ul>
-  <strong>Faves:</strong>
   <% @user.find_liked_items.each do |element| %>
     <% if element.class == Pedal %>
       <li>
         <%= element.title %>
       </li>
-    <% else %>
+    <% end %>
+  <% end %>
+</ul>
+
+<strong>Favourite Rigs:</strong>
+<ul>
+  <% @user.find_liked_items.each do |element| %>
+    <% if element.class == Rig %>
       <li>
         <%= element.guitarist %>
       </li>
