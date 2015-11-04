@@ -11,7 +11,7 @@ class PedalsController < ApplicationController
   # GET /pedals
   # GET /pedals.json
   def index
-    @pedals = Pedal.all
+    @pedals = Pedal.all.paginate(:page => params[:page])
   end
 
   # GET /pedals/1

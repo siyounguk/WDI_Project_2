@@ -15,6 +15,7 @@
   </thead>
 
   <tbody>
+  <%= will_paginate @pedals %>
     <% @pedals.each do |pedal| %>
       <tr>
         <td><%= pedal.title %></td>
