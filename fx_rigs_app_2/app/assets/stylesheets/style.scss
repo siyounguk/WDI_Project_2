@@ -1,14 +1,36 @@
-*{
-  font-family: 'Contrail One', cursive;
-}
+
 
 .head-bar{
-  background-color: #0A0A03;
+  background-color: #1D1F0A;
+  padding: 10px;
+  height: 100px;
+  .top-bar{
+      background-color: #1D1F0A;
+    .name{
+      background-color: #1D1F0A;
+      color: #D5EB22;
+      font-family: 'Contrail One', cursive; 
+      font-size: 40px;
+      a:not(.button):hover {
+          background-color: #D5EB22;
+          background: #D5EB22;
+          color: #1D1F0A;
+      }
+      a:not(.button) {
+          background-color: #1D1F0A;
+          background: #1D1F0A;
+
+      }
+    }
+  }
+  .right{
+      background-color: #1D1F0A;
+    li{
+      background-color: #1D1F0A;
+    }
+  }
 }
 
-.name{
-  color: #D3FB00;
-}
 
 th{
   border: 1px solid black;
