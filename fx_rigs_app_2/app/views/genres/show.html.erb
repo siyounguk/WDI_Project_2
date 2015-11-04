@@ -19,7 +19,8 @@
   </ul>
 </p>
 
-<% if user_signed_in? && current_user.role = "admin" %>
+<% if user_signed_in? && current_user.role == "admin" %>
   <%= link_to 'Edit', edit_genre_path %> |
-  <%= link_to 'Back', genres_path %>
 <% end  %>
+<%= link_to 'Back', genres_path %>
+
