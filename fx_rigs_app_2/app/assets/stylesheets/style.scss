@@ -1,4 +1,6 @@
-
+*{
+  list-style-type: none;
+}
 
 .head-bar{
   background-color: #1D1F0A;
@@ -11,7 +13,12 @@
       color: #D5EB22;
       font-family: 'Contrail One', cursive; 
       font-size: 40px;
+
+      a{
+        border-radius: 3px;
+      }
       a:not(.button):hover {
+          
           background-color: #D5EB22;
           background: #D5EB22;
           color: #1D1F0A;

@@ -1,3 +1,16 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#home-list{
+  
+  margin: 0 auto;
+
+  #pedal-home-list{
+    padding-left: 100px;
+    padding-right: 100px;
+    float: left;
+  }
+  
+  #rig-home-list{
+    padding-left: 100px;
+    padding-right: 100px;
+    float: left;
+  }
+}
