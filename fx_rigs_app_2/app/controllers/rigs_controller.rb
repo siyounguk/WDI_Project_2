@@ -1,5 +1,8 @@
 class RigsController < ApplicationController
+
   before_action :set_rig, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+
 
   def add_new_comment
     @rig = Rig.find(params[:id])
@@ -92,7 +95,7 @@ class RigsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rig_params
-      params.require(:rig).permit(:guitarist, :guitarist_photo,:rig_photo, :description, :comments, :user_id, :genre_id, :username, :guitarist_upload_image, :rig_upload_image, pedal_ids:[])
+      params.require(:rig).permit(:guitarist, :guitarist_photo,:rig_photo, :description, :comments, :user_id, :genre_id, :username, :guitarist_upload_image, :rig_upload_image, :remote_rig_upload_image_url, pedal_ids:[])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

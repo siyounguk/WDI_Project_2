@@ -12,8 +12,15 @@
 
 <p>
   <strong>Favourites:</strong>
- 
-    <%= @user.find_liked_items %>  
+    
+
+    <%= @user.find_liked_items[4].title %> <br>
+    <%= @user.find_liked_items[5].guitarist %>  
+</p>
+
+<p>
+  <strong>Faves:</strong>
+
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
