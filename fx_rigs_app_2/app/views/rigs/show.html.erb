@@ -73,6 +73,7 @@
   <strong>Genre:</strong>
   <%= link_to @rig.genre.genre_name, genre_path %>
 </p>
-
-<%= link_to 'Edit', edit_rig_path(@rig) %> |
+<%if current_user.id == @rig.user_id %>
+  <%= link_to 'Edit', edit_rig_path(@rig) %> |
+<% end %>
 <%= link_to 'Back', rigs_path %>
