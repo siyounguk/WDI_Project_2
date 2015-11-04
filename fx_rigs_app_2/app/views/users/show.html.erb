@@ -18,10 +18,20 @@
     <%= @user.find_liked_items[5].guitarist %>  
 </p>
 
-<p>
+<ul>
   <strong>Faves:</strong>
-
-</p>
+  <% @user.find_liked_items.each do |element| %>
+    <% if element.class == Pedal %>
+      <li>
+        <%= element.title %>
+      </li>
+    <% else %>
+      <li>
+        <%= element.guitarist %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

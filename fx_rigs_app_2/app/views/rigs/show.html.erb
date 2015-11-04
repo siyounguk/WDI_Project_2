@@ -5,29 +5,16 @@
   <%= @rig.guitarist %>
 </p>
 
-<% if @rig.guitarist_upload_image %>
   <p class="guitarist-image">
     <strong>Guitarist Upload Image:</strong>
     <%= image_tag @rig.guitarist_upload_image.url %>
   </p>
-<% else %>
-  <p  class="guitarist-image">
-    <strong>Guitarist photo:</strong>
-    <%= image_tag @rig.guitarist_photo %>
-  </p>
-<% end %>
 
-<% if @rig.rig_upload_image.url %>
   <p class="rig-image">
     <b>Rig Upload Image:</b>
     <%= image_tag @rig.rig_upload_image.url %>
   </p>
-<% else %>
-  <p class="rig-image">
-    <strong>Rig photo:</strong>
-    <%= image_tag @rig.rig_photo %>
-  </p>
-<% end %>
+
 
 <p>
   <strong>Description:</strong>
