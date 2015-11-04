@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'foundation-rails'
 gem 'pg_search'
 gem 'acts_as_votable'
 gem 'acts_as_commentable'

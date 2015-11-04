@@ -1,37 +1,22 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>FxRigsApp2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<header>FX:Rigs</header>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<p><%= link_to "home", root_path %></p>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-    <% if user_signed_in? %>
-      Hola <%= link_to current_user.email, edit_user_registration_path%>
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Login", new_user_session_path %> |
-      <%= link_to "Signup |",new_user_registration_path %> 
-    <% end %>
-    <%= link_to "Rigs",rigs_path %> |
-    <%= link_to "New Rig", new_rig_path if user_signed_in? %>
-    <%= link_to "Pedals", pedals_path %>
-    <%= link_to "Genres", genres_path %>
-    <%= link_to "Profile", user_path(current_user) if user_signed_in? %>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-    <%= form_tag( results_path, method: "get") do %>
-      <%= label_tag(:q, "Search Rigs:") %>
-      <%= text_field_tag(:q) %>
-    <% end %>
+    <%= stylesheet_link_tag   "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
+  <body>
 
-<%= yield %>
+  <%= render "header" %>
 
-</body>
+    <%= yield %>
+
+  </body>
 </html>
