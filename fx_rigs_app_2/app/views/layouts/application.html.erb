@@ -21,8 +21,9 @@
     <% end %>
     <%= link_to "Rigs",rigs_path %> |
     <%= link_to "New Rig", new_rig_path if user_signed_in? %>
-    <%= link_to "Pedals",pedals_path %>
-    <%= link_to "Genres",genres_path %>
+    <%= link_to "Pedals", pedals_path %>
+    <%= link_to "Genres", genres_path %>
+    <%= link_to "Profile", user_path(current_user) if user_signed_in? %>
 
     <%= form_tag( results_path, method: "get") do %>
       <%= label_tag(:q, "Search Rigs:") %>
