@@ -4,6 +4,7 @@ gem 'pg_search'
 gem 'acts_as_votable'
 gem 'acts_as_commentable'
 gem 'carrierwave', '0.10.0'
+gem 'will_paginate', '~> 3.0.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
