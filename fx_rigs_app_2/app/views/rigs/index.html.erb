@@ -27,8 +27,10 @@
         <td><%= link_to "upvote", like_rig_path(rig), method: :put%></td>
         <td><%= rig.get_likes.size %></td>
         <td><%= link_to 'Show', rig %></td>
-        <td><%= link_to 'Edit', edit_rig_path(rig) if current_user %></td>
-        <td><%= link_to 'Destroy', rig, method: :delete, data: { confirm: 'Are you sure?' } if current_user %></td>
+        <%if current_user.id == rig.user_id %>
+          <td><%= link_to 'Edit', edit_rig_path(rig) if current_user.id == rig.user_id %></td>
+          <td><%= link_to 'Destroy', rig, method: :delete, data: { confirm: 'Are you sure?' } if current_user %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

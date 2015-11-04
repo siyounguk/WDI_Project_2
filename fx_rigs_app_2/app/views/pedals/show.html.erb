@@ -34,7 +34,7 @@
 </p>
 
 <p>
-  <%= link_to "upvote", like_pedal_path(@pedal[:id]), method: :put%></td>
+  <%= link_to "Like", like_pedal_path(@pedal[:id]), method: :put%></td>
 </p> 
 
 <p>
@@ -47,5 +47,7 @@
   <%= @pedal.user_id %>
 </p>
 
-<%= link_to 'Edit', edit_pedal_path(@pedal) %> |
+<% if user_signed_in? && current_user.role == "admin" %>
+  <%= link_to 'Edit', edit_pedal_path(@pedal) %> |
+<% end %>
 <%= link_to 'Back', pedals_path %>
