@@ -15,8 +15,5 @@
 //= require foundation
 //= require select2
 //= require_tree .
-if (Modernizr.touch) {
-  $('form.custom select').attr('data-customforms', 'disabled');
-}
 
 $(function(){ $(document).foundation(); });

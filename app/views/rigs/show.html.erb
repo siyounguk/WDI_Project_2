@@ -10,7 +10,7 @@
       <%= image_tag @rig.guitarist_upload_image.url, width: 200 %>
       <strong>Genre:</strong>
       <%= link_to @rig.genre.genre_name, genre_path %> <br >
-      <strong>Likes:</strong>
+      <strong>no of Likes:</strong>
       <%= @rig.get_likes.size  %> <br>
       <strong>User:</strong>
       <%= @rig.user.username if @rig.user %>

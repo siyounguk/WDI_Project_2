@@ -22,7 +22,8 @@
           <td class="rig-image"><%= image_tag rig.rig_upload_image.url %></td>
           <td><%= rig.user.username if rig.user %></td>
   
-          <td>No. of  likes <%= rig.get_likes.size %></td>
+          <td>No. of  likes <%= rig.get_likes.size %> <br>
+          <%= link_to "Like?", like_rig_path(rig), method: :put%></td>
           <td><%= link_to 'Show', rig %></td>
           <%if user_signed_in? && current_user.id == rig.user_id %>
             <td><%= link_to 'Edit', edit_rig_path(rig) if current_user.id == rig. user_id %></td>
