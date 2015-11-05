@@ -10,13 +10,14 @@
   }
 
   table{
-    background-color: #222222;
+    background-color: rgba(13.3, 13.3, 13.3, 0.4);
+
     color: #AFB94C;
     border-radius: 4px;
     border: 0px;
 
     thead{
-      background-color: #222222;
+      background-color: rgba(13.3, 13.3, 13.3, 0.4);
       color: #AFB94C;
       text-align: center;
     }
@@ -25,7 +26,7 @@
       text-align: center;
     }
     td{
-      background-color: #222222;
+      background-color: rgba(13.3, 13.3, 13.3, 0.4);
       color: #AFB94C;
       text-align: center;
       a{
@@ -79,13 +80,13 @@ a  {
 
   }
   .columns{ 
-  border: 1px solid black;  
+  
   }
 }
 
 .rigs-show-pedals{
   display: inline-block;
-  border: 1px solid black; 
+
   margin: 0 auto;
   img{
     max-height: 100px;

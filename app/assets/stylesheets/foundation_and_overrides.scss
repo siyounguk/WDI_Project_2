@@ -1295,8 +1295,8 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-table-classes: $include-html-classes;
 
 // These control the background color for the table and even rows
-// $table-bg: $white;
-// $table-even-row-bg: $snow;
+$table-bg: rgba(13.3, 13.3, 13.3, 0.4);
+$table-even-row-bg: rgba(13.3, 13.3, 13.3, 0.4);
 
 // These control the table cell border style
 // $table-border-style: solid;

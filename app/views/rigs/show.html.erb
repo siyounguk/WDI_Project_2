@@ -52,7 +52,10 @@
       <% @rig.pedals.each do |ped| %>
         <li class="rigs-show-pedals">
           <%= link_to(image_tag(ped.image_url), pedal_path(ped)) %>
+         
+
         </li>
+
       <% end %>
     </ul>
 
@@ -61,7 +64,7 @@
 
     
 
-  <%if current_user.id == @rig.user_id %>
+  <%if user_signed_in? && current_user.id == @rig.user_id %>
     <%= link_to 'Edit', edit_rig_path(@rig) %> |
   <% end %>
   <%= link_to 'Back', rigs_path %>
