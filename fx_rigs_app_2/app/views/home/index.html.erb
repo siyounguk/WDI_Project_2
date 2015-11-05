@@ -3,7 +3,6 @@
 
 
   <div class="autoplay">
-    
     <div><%= image_tag "myrig.jpg", alt: "slide 1" %></div>
     <div><%= image_tag "home-rig8", alt: "slide 1" %></div>
     <div><%= image_tag "home-rig3", alt: "slide 1" %></div>
@@ -12,34 +11,37 @@
     <div><%= image_tag "home-rig7", alt: "slide 1" %></div>
   </div>
 
-  <h1>Home#index</h1>
-  <p>Find me in app/views/home/index.html.erb</p>
-  
-  <div class="row" id="home-list">
-    <div class="field large-4 columns">
-      <ul id="pedal-home-list">
-        <% @pedals.each do |pedal| %>
-          <li>
-            <%= pedal.cached_votes_score %>
-            <%= link_to pedal.title, pedal %>
-      
-          </li>
-        <% end %>
-      </ul>
-    </div>
-    <div class="field large-4 columns">
-      
-    </div>
-    <div class="field large-4 columns">
-      <ul id="rig-home-list">
-        <% @rigs.each do |rig| %>
-          <li>
-            <%= rig.cached_votes_score %>
-            <%= link_to rig.guitarist, rig %>
-      
-          </li>
-        <% end %>
-      </ul>
+  <div class="home-body">
+    <h1>FX:Rigs</h1>
+    <p>Welcome to the website dedicated to guitarists Effects Pedalboards and Rigs</p> 
+    <p>Here you can search for a guitarist and look at which pedals they use.</p> 
+    <p>You can upload your own rig and </p>
+    <div class="row" id="home-list">
+      <div class="field large-5 columns">
+        <ul id="pedal-home-list">
+          <% @pedals.each do |pedal| %>
+            <li>
+              <%= pedal.cached_votes_score %>
+              <%= link_to pedal.title, pedal %>
+        
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="field large-2 columns">
+        
+      </div>
+      <div class="field large-5 columns">
+        <ul id="rig-home-list">
+          <% @rigs.each do |rig| %>
+            <li>
+              <%= rig.cached_votes_score %>
+              <%= link_to rig.guitarist, rig %>
+        
+            </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

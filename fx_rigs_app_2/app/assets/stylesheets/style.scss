@@ -1,5 +1,10 @@
 *{
   list-style-type: none;
+
+}
+
+body{
+  background-color: #FDFDFD;
 }
 
 .head-bar{
@@ -10,7 +15,7 @@
       background-color: #1D1F0A;
     .name{
       background-color: #1D1F0A;
-      color: #D5EB22;
+      color: #E8FB33;
       font-family: 'Permanent Marker', cursive; 
       font-size: 40px;
 
@@ -39,6 +44,8 @@
 }
 
 
+
+
 th{
   border: 1px solid black;
 }
@@ -49,4 +56,8 @@ td{
 
 .select2-choices{
   width: 300px;
+}
+
+.left li {
+  line-height: 110px;
 }
