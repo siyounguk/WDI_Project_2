@@ -96,6 +96,7 @@ td{
 
 body {
   background-image: url("home-bg.jpeg");
+  color: #AFB94C;
 }
 
 ul {
@@ -103,6 +104,25 @@ ul {
   padding: 0px;
 }
 
-li.rigs-show-pedals {
-  margin: 15px;
+li{
+  .rigs-show-pedals {
+    margin: 15px;
+  }
+}
+
+label{
+  color: #AFB94C;
+}
+
+a{
+  color: #AFB94C;
+}
+
+td{
+  color: #AFB94C;
+}
+
+.pagination{
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
 }
