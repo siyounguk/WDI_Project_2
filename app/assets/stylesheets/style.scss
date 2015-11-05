@@ -126,3 +126,10 @@ td{
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
 }
+
+select {
+  display: inline !important;
+}
+form.custom div.custom.dropdown {
+  display: none;
+}
