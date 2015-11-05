@@ -1,6 +1,6 @@
 *{
   list-style-type: none;
-
+  font-family: 'Ubuntu', sans-serif;
 }
 
 body{
@@ -15,35 +15,61 @@ body{
       background-color: #1D1F0A;
     .name{
       background-color: #1D1F0A;
-      color: #E8FB33;
+      color: #AFB94C;
       font-family: 'Permanent Marker', cursive; 
-      font-size: 40px;
+      font-size: 60px;
 
       a{
         border-radius: 3px;
+        
+        
       }
       a:not(.button):hover {
-          
-          background-color: #E8FB33;
-          background: #E8FB33;
+          font-family: 'Ubuntu', sans-serif;
+          font-weight: bold;
+          font-style: italic;
+      
+          background-color: #AFB94C;
+          background: #AFB94C;
           color: #1D1F0A;
       }
       a:not(.button) {
+          font-family: 'Ubuntu', sans-serif;
+          font-weight: bold;
+          font-style: italic;
           background-color: #1D1F0A;
           background: #1D1F0A;
 
       }
     }
   }
+
+  #rigs-title{
+    font-family: 'Permanent Marker', cursive;
+    .name{
+     
+   }
+  }
+
+
   .right{
+      
+
+
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: bold;
+      font-style: italic;
+      
+    label{
+      padding: 4px;
+    }
+
       background-color: #1D1F0A;
     li{
       background-color: #1D1F0A;
     }
   }
 }
-
-
 
 
 th{

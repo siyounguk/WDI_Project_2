@@ -1,15 +1,61 @@
-// Place all the styles related to the Rigs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.rigs-index{
+    background-image: url("home-bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  h1{
+    color: #AFB94C;
+    font-family: 'Permanent Marker', cursive; 
+    font-size: 60px;
+    text-align: center;
+  }
 
+  table{
+    background-color: #222222;
+    color: #AFB94C;
+    border-radius: 4px;
+    border: 0px;
 
-.guitarist-image img{
-  min-width: 160px;
-  max-width: 160px;
+    thead{
+      background-color: #222222;
+      color: #AFB94C;
+      text-align: center;
+    }
+    th{
+      color: #AFB94C;
+      text-align: center;
+    }
+    td{
+      background-color: #222222;
+      color: #AFB94C;
+      text-align: center;
+      a{
+        color: #AFB94C;
+        text-align: center;
+      }
+    }
+  }
+  #rigs-title{
+    text-align: center;
+  }
+  
+  .guitarist-image img{
+    min-width: 160px;
+    max-width: 160px;
+  }
+  
+  .rig-image img{
+    min-width: 400px;
+    max-width: 400px;
+  }
 }
 
-.rig-image img{
-  min-width: 400px;
-  max-width: 400px;
+
+h1{
+  color: #222222;
+  font-family: 'Permanent Marker', cursive; 
+  font-size: 60px;
+  text-align: center;
 }
+
+
 

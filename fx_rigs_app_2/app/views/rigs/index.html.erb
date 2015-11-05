@@ -1,41 +1,39 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Rigs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Guitarist</th>
-      <th>Guitarist photo</th>
-      <th>Rig photo</th>  
-      <th>User</th>
-      <th>Genre</th>
-      <th>click to like</th>
-      <th> no.of likes</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @rigs.each do |rig| %>
+<div class="rigs-index"> 
+  <p id="notice"><%= notice %></p>
+  
+  <h1 id="rigs-title">Rigs Index</h1>
+  
+  <table align="center">
+    <thead>
       <tr>
-        <td><%= rig.guitarist %></td>
-        <td class="guitarist-image"><%= image_tag rig.guitarist_upload_image.url %></td>
-        <td class="rig-image"><%= image_tag rig.rig_upload_image.url %></td>
-        <td><%= rig.user.username if rig.user %></td>
-        <td><%= rig.genre.genre_name if rig.genre %></td>
-        <td><%= link_to "upvote", like_rig_path(rig), method: :put%></td>
-        <td><%= rig.get_likes.size %></td>
-        <td><%= link_to 'Show', rig %></td>
-        <%if current_user.id == rig.user_id %>
-          <td><%= link_to 'Edit', edit_rig_path(rig) if current_user.id == rig.user_id %></td>
-          <td><%= link_to 'Destroy', rig, method: :delete, data: { confirm: 'Are you sure?' } if current_user %></td>
-        <% end %>
+        <th width="100">Guitarist</th>
+        <th>Rig photo</th>  
+        <th>User</th>
+        <th>likes</th>
+  
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Rig', new_rig_path %>
+    </thead>
+  
+    <tbody>
+      <% @rigs.each do |rig| %>
+        <tr>
+          <td class="guitarist-image"><%= rig.guitarist %><br/><%= image_tag rig. guitarist_upload_image.url %><br/> Genre: <%= rig.genre.genre_name if   rig.genre %></td>
+          <td class="rig-image"><%= image_tag rig.rig_upload_image.url %></td>
+          <td><%= rig.user.username if rig.user %></td>
+  
+          <td>No. of  likes <%= rig.get_likes.size %></td>
+          <td><%= link_to 'Show', rig %></td>
+          <%if current_user.id == rig.user_id %>
+            <td><%= link_to 'Edit', edit_rig_path(rig) if current_user.id == rig. user_id %></td>
+            <td><%= link_to 'Destroy', rig, method: :delete, data: { confirm: ' Are you sure?' } if current_user %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <br>
+  
+  <%= link_to 'New Rig', new_rig_path %>
+</div> 
