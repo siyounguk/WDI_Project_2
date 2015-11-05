@@ -20,6 +20,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'fog', '1.29.0'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
@@ -50,6 +52,6 @@ group :development do
   gem 'spring'
 
   gem 'rails_12factor', group: :production
-  gem 'fog', '1.29.0'
+  
 end
 

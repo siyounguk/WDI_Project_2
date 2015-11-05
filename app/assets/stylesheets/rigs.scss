@@ -71,6 +71,32 @@ a  {
   }
 }
 
+.rigs-show{
+
+  .row{
+    height: 500px;
+    border: 1px solid black;  
+
+  }
+  .columns{ 
+  border: 1px solid black;  
+  }
+}
+
+.rigs-show-pedals{
+  display: inline-block;
+  border: 1px solid black; 
+  margin: 0 auto;
+  img{
+    max-height: 100px;
+  }
+
+  p{
+    #comments-separator{
+    border: 1px solid black; 
+    }
+  }
+}
 
 
 
