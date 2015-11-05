@@ -1,24 +1,62 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div id="home">
 
-<div id="home-list">
-  <ul id="pedal-home-list">
-    <% @pedals.each do |pedal| %>
-      <li>
-        <%= pedal.cached_votes_score %>
-        <%= link_to pedal.title, pedal %>
+<!-- <ul class="autoplay" data-orbit>
+    <li>
+      <img src="../assets/img/examples/satelite-orbit.jpg" alt="slide 1" />
+      <div class="autoplay-caption">
+        Caption One.
+      </div>
+    </li>
+    <li class="active">
+      <img src="../assets/img/examples/andromeda-orbit.jpg" alt="slide 2" />
+      <div class="autoplay-caption">
+        Caption Two.
+      </div>
+    </li>
+    <li>
+      <img src="../assets/img/examples/launch-orbit.jpg" alt="slide 3" />
+      <div class="autoplay-caption">
+        Caption Three.
+      </div>
+    </li>
+  </ul> -->
+
+  <div class="autoplay">
+    <div><img src="../assets/img/examples/satelite-orbit.jpg" alt="slide 1" /></div>
+    <div><img src="../assets/img/examples/satelite-orbit.jpg" alt="slide 1" /></div>
+    <div><img src="../assets/img/examples/satelite-orbit.jpg" alt="slide 1" /></div>
+    <div><img src="../assets/img/examples/satelite-orbit.jpg" alt="slide 1" /></div>
+    <div><img src="../assets/img/examples/satelite-orbit.jpg" alt="slide 1" /></div>
+  </div>
+
+  <h1>Home#index</h1>
+  <p>Find me in app/views/home/index.html.erb</p>
   
-      </li>
-    <% end %>
-  </ul>
-  
-  <ul id="rig-home-list">
-    <% @rigs.each do |rig| %>
-      <li>
-        <%= rig.cached_votes_score %>
-        <%= link_to rig.guitarist, rig %>
-  
-      </li>
-    <% end %>
-  </ul>
+  <div class="row" id="home-list">
+    <div class="field large-4 columns">
+      <ul id="pedal-home-list">
+        <% @pedals.each do |pedal| %>
+          <li>
+            <%= pedal.cached_votes_score %>
+            <%= link_to pedal.title, pedal %>
+      
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="field large-4 columns">
+      
+    </div>
+    <div class="field large-4 columns">
+      <ul id="rig-home-list">
+        <% @rigs.each do |rig| %>
+          <li>
+            <%= rig.cached_votes_score %>
+            <%= link_to rig.guitarist, rig %>
+      
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>

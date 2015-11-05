@@ -1,16 +1,39 @@
-#home-list{
-  
+#home{
+
   margin: 0 auto;
 
-  #pedal-home-list{
-    padding-left: 100px;
-    padding-right: 100px;
-    float: left;
+
+  .autoplay{
+    img{
+      min-height: 300px
+    }
+  } 
+  h1{
+    text-align: center;
   }
+
+  p{
+    text-align: center;
+  }
+
+  .field{
+    border: 1px solid black;
+    height: 500px 
+  }
+
+  #home-list{
+    
+
   
-  #rig-home-list{
-    padding-left: 100px;
-    padding-right: 100px;
-    float: left;
+    #pedal-home-list{
+
+      
+    }
+    
+    #rig-home-list{
+    
+
+     
+    }
   }
 }
