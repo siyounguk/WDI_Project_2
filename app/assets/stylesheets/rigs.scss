@@ -1,7 +1,9 @@
 .rigs-index{
-    background-image: url("home-bg.jpeg");
+    background-image: url("home-bg.jpeg"); 
+    background-color: rgba(13.3, 13.3, 13.3, 0.4);
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100px;
   h1{
     color: #AFB94C;
     font-family: 'Permanent Marker', cursive; 
@@ -74,11 +76,21 @@ a  {
 
 .rigs-show{
 
-  .row{
-    height: 500px;
-    border: 1px solid black;  
 
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .row{
+  
+    border: 1px solid rgba(13, 13, 13, 0.4);  
+
+  
+    .medium-12{
+      height: 200px;
+    }
   }
+
+  
   .columns{ 
   
   }
@@ -86,7 +98,6 @@ a  {
 
 .rigs-show-pedals{
   display: inline-block;
-
   margin: 0 auto;
   img{
     max-height: 100px;
@@ -94,7 +105,7 @@ a  {
 
   p{
     #comments-separator{
-    border: 1px solid black; 
+    border: 3px solid black; 
     }
   }
 }
