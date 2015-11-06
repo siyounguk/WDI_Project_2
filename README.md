@@ -1,4 +1,7 @@
 # WDI_Project_2
+This project was for my WDI project at GA in 2015. It is my first full-stack Rails application.
+
+
 User Stories
 
 The app will have users who can post their effects 'rig' or 'setup'. They will also be able to post famous guitarists 'rigs' with pics.
@@ -35,3 +38,6 @@ gem 'acts_as_votable'
 gem 'acts_as_commentable'
 gem 'carrierwave', '0.10.0'
 gem 'will_paginate', '~> 3.0.6'
+Slick
+Select2
+Foundation
