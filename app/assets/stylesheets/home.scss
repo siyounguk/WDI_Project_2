@@ -47,20 +47,18 @@
   .field.large-5.columns{
     border-radius: 10px;
     border: 1px solid #AFB94C;
-
     
   #pedal-home-list{
 
       li{
         color: #AFB94C;
-
         a{
           color: #AFB94C;
         }
       }
     }
 
-  #rig-home-list{
+    #rig-home-list{
       li{
         color: #AFB94C;
         a{
@@ -69,13 +67,27 @@
       }
     }
 
-  #home-list{
-
-    ul{
-      font-size: 40px;
-    }
-    
+  .field.large-5.columns{
+    background-color: rgba(13, 13, 13, 0.4);
   }
+
+    #home-list{
+
+      ul{
+        font-size: 40px;
+
+        
+
+        #pedal-home-list{
+            li{
+              color: #AFB94C;
+              a{
+                color: #AFB94C;
+              }
+            }
+          }
+      }    
+    }
   
   }
   

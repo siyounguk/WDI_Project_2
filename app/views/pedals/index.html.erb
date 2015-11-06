@@ -1,38 +1,41 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Pedals</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Category</th>
-      <th>Pedal photo</th>
-      <th>Price</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-  <%= will_paginate @pedals %>
-    <% @pedals.each do |pedal| %>
+<div class="pedals-index">  
+  <p id="notice"><%= notice %></p>
+  
+  <h1>Listing Pedals</h1>
+  
+  <table>
+    <thead>
       <tr>
-        <td><%= pedal.title %></td>
-        <td><%= pedal.category %></td>
-        <td><%= image_tag pedal.image_url %></td>
-        <td><%= pedal.price.to_f %></td>
-        <td><%= pedal.short_description %></td>
-        <td><%= link_to 'Show', pedal %></td>
-        <% if user_signed_in? && current_user.role == "admin" %>
-          <td><%= link_to 'Edit', edit_pedal_path(pedal) %></td>
-          <td><%= link_to 'Destroy', pedal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Pedal photo</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Pedal', new_pedal_path %>
+    </thead>
+  
+    <tbody>
+    <%= will_paginate @pedals %>
+      <% @pedals.each do |pedal| %>
+        <tr>
+          <td><%= pedal.title %></td>
+          <td><%= pedal.category %></td>
+          <td><%= image_tag pedal.image_url %></td>
+          <td><%= pedal.price.to_f %></td>
+          <td><%= pedal.short_description %></td>
+          <td><%= link_to 'Show', pedal %></td>
+          <% if user_signed_in? && current_user.role == "admin" %>
+            <td><%= link_to 'Edit', edit_pedal_path(pedal) %></td>
+            <td><%= link_to 'Destroy', pedal, method: :delete, data: { confirm: ' Are you sure?' } %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <br>
+  
+  <%= link_to 'New Pedal', new_pedal_path %>
+</div>
+  

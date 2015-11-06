@@ -1,6 +1,7 @@
 *{
   list-style-type: none;
   font-family: 'Ubuntu', sans-serif;
+  color: white;
 }
 
 body{
@@ -74,10 +75,12 @@ body{
 
 th{
   border: 1px solid black;
+  color: #AFB94C;
 }
 
 td{
   border: 1px solid black;
+  color: #AFB94C;
 }
 
 .select2-choices{
@@ -92,7 +95,7 @@ td{
   background-color: rgba(13, 13, 13, 0.4);
   color: white;
   text-align: center;
-  }
+}
 
 body {
   background-image: url("home-bg.jpeg");
@@ -130,6 +133,16 @@ td{
 select {
   display: inline !important;
 }
-form.custom div.custom.dropdown {
-  display: none;
+
+form{
+  .custom{
+    div{
+      .custom{
+           .dropdown {
+          display: none;
+        }
+      }
+    }
+  }
 }
+   
