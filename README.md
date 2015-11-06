@@ -2,7 +2,7 @@
 This project was for my WDI project at GA in 2015. It is my first full-stack Rails application.
 
 
-User Stories
+*User Stories
 
 The app will have users who can post their effects 'rig' or 'setup'. They will also be able to post famous guitarists 'rigs' with pics.
 
@@ -41,3 +41,4 @@ gem 'will_paginate', '~> 3.0.6'
 Slick
 Select2
 Foundation
+Nokogiri
