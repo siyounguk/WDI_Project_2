@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
   resources :rigs do
     member do
-      put "like", to: "rigs#show"
+      put "like", to: "rigs#upvote"
       put "dislike", to: "rigs#downvote"
     end
   end
