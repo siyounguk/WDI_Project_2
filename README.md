@@ -1,8 +1,13 @@
 # WDI_Project_2
 This project was for my WDI project at GA in 2015. It is my first full-stack Rails application.
 
+##FX:Rigs
 
-*User Stories
+###What is FX:Rigs
+
+FX:Rigs is a resource for guitarists interested guitar effects pedals. 
+
+###User Stories
 
 The app will have users who can post their effects 'rig' or 'setup'. They will also be able to post famous guitarists 'rigs' with pics.
 
@@ -17,28 +22,37 @@ The will also be able to search / filter effects pedals by Music Genre type.
 
 Users should be be able to write or read other user's reviews on effects pedals on the website
 
-* Ruby version
+###**Ruby version**
 
 version 4.2.2
 
-* Deployment instructions
+###**Deployment instructions**
 
-http://afternoon-depths-3396.herokuapp.com/
+ [click on this link to see the app on Heroku](http://afternoon-depths-3396.herokuapp.com/)
+ 
+ **URL:**
+ http://afternoon-depths-3396.herokuapp.com/
 
-* Database creation
+###**Database creation**
 POSTGRESQL
 
-*Technologies Used
+###**Technologies Used**
 Rails
 JQuery
 Javascript
 
-*Gems
-gem 'acts_as_votable'
-gem 'acts_as_commentable'
-gem 'carrierwave', '0.10.0'
-gem 'will_paginate', '~> 3.0.6'
-Slick
-Select2
-Foundation
-Nokogiri
+###Installation
+
+**Gems**
+
+1. gem 'acts_as_votable'
+2. gem 'acts_as_commentable'
+3. gem 'carrierwave', '0.10.0'
+4. gem 'will_paginate', '~> 3.0.6'
+5. gem 'foundation-rails'
+6. Nokogiri
+
+**Javascript/Jquery plugins**
+
+5. Slick
+6. Select2

@@ -56,10 +56,9 @@
     </div>
   
 
-    <div class="large-6 columns">
-    
+    <div class="large-6 columns" >
+      <%= f.label :pedal_ids %> 
       <%=  f.collection_select(:pedal_ids, Pedal.all, :id, :title, {}, { multiple: true } ) %>
-      <%= f.label :pedal_ids %>  
     </div> 
   </div>
 
